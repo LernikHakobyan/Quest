@@ -1,0 +1,276 @@
+let questions = [
+    "What is the correct way to declare a variable in JavaScript?",
+    "Which of the following is not a primitive data type in JavaScript?",
+    "What is the purpose of the === operator in JavaScript?",
+    "What method is used to add a new element to the end of an array in JavaScript?",
+    "What is the result of typeof null in JavaScript?",
+    "Which event occurs when a user clicks on an HTML element?",
+    "How do you write a single-line comment in JavaScript?",
+    "What is the correct syntax for a for loop in JavaScript?",
+    "Which function is used to parse a JSON string in JavaScript?",
+    "What does the NaN property represent in JavaScript?",
+    "How can you check if a variable is an array in JavaScript?",
+    "Which method is used to remove the last element from an array in JavaScript?",
+    "What is the purpose of the setTimeout() function in JavaScript?",
+    "Which keyword is used to declare a block scope variable in JavaScript?",
+    "How do you convert a string to lowercase in JavaScript?",
+    "Which of the following methods can be used to add elements to the beginning of an array in JavaScript?",
+    "In JavaScript, which of the following statements are true about arrow functions?",
+    "When comparing two objects in JavaScript using the == operator, which statements are true?",
+    "Which of the following are valid ways to declare a JavaScript array?",
+    "In JavaScript, which statements are true about the this keyword?"
+]
+
+let answers = [
+    {
+        a : ["var myVar",true],
+        b : ["let myVar",false],
+        c : ["const myVar",false],
+        d : ["all of the above",false],
+        count : 1
+    },
+
+    {
+        a : ["string",false],
+        b : ["number",false],
+        c : ["array",false],
+        d : ["boolean",true],
+        count : 1
+    },
+
+    {
+        a : ["It checks for strict equality without type conversion.",true],
+        b : ["It assigns a value to a variable.",false],
+        c : ["It concatenates two strings.",false],
+        d : ["It performs a bitwise operation.",false],
+        count : 1
+    },
+
+    {
+        a : ["push()",true],
+        b : ["pop()",false],
+        c : ["shift()",false],
+        d : ["unshift()",false],
+        count : 1
+    },
+
+    {
+        a : ['"null"',false],
+        b : ['"object"',true],
+        c : ['"undefined"',false],
+        d : ['"boolean"',false],
+        count : 1
+    },
+
+    {
+        a : ["onclick",true],
+        b : ["onmouseover",false],
+        c : ["onkeydown",false],
+        d : ["onsubmit",false],
+        count : 1
+    },
+
+    {
+        a : ["<!-- comment -->",false],
+        b : ["// comment",true],
+        c : ["/* comment */",false],
+        d : ["** comment **",false],
+        count : 1
+    },
+
+    {
+        a : ["for (i = 0; i < 5; i++)",true],
+        b : ["for (i < 5; i++)",false],
+        c : ["for (i = 0; i < 5)",false],
+        d : ["for (i = 0; i++; i < 5)",false],
+        count : 1
+    },
+
+    {
+        a : ["JSON.stringify()",false],
+        b : ["JSON.parse()",true],
+        c : ["JSON.stringifyify()",false],
+        d : ["JSON.parseJSON()",false],
+        count : 1
+    },
+
+    {
+        a : ['"Not a Node"',false],
+        b : ['"Null and Negative"',false],
+        c : ['"Not a Number"',true],
+        d : ['"No Absolute Number"',false],
+        count : 1
+    },
+
+    {
+        a : ["Using the typeof operator",false],
+        b : ["Using the isArray() method",true],
+        c : ["Using the isArr() function",false],
+        d : ["Using the Array() constructor",false],
+        count : 1
+    },
+
+    {
+        a : ["slice()",false],
+        b : ["pop()",true],
+        c : ["shift()",false],
+        d : ["unshift()",false],
+        count : 1
+    },
+
+    {
+        a : ["It delays the execution of a function by a specified amount of time.",true],
+        b : ["It sets an interval for executing a function repeatedly.",false],
+        c : ["It executes a function immediately.",false],
+        d : ["It stops the execution of a function.",false],
+        count : 1
+    },
+
+    {
+        a : ["block",false],
+        b : ["scope",false],
+        c : ["let",true],
+        d : ["var",false],
+        count : 1
+    },
+
+    {
+        a : ["toLowerCase()",true],
+        b : ["lowerCase()",false],
+        c : ["toLower()",false],
+        d : ["convertLower()",false],
+        count : 1
+    },
+
+    {
+        a : ["unshift()",true],
+        b : ["push()",false],
+        c : ["concat()",false],
+        d : ["splice()",true],
+        count : 2
+    },
+
+    {
+        a : ["They lexically bind the this value.",true],
+        b : ["They cannot be used as constructors.",false],
+        c : ["They have implicit return when the function body is a single expression.",true],
+        d : ["They can be defined using the function keyword.",false],
+        count : 2
+    },
+
+    {
+        a : ["It compares the references, not the actual content of the objects.",true],
+        b : ["If both objects have the same properties and values, they are considered equal.",true],
+        c : ["It returns true if both objects are referencing the same memory location.",false],
+        d : ["It returns false even if the objects have the same properties and values but are different instances.",false],
+        count : 2
+    },
+
+    {
+        a : ["let arr = []",true],
+        b : ["let arr = new Array()",false],
+        c : ["let arr = [1, 2, 3]",true],
+        d : ["let arr = Array(5)",false],
+        count : 2
+    },
+
+    {
+        a : ["It refers to the global object in the absence of an explicit context.",true],
+        b : ["It refers to the object that is executing the current function.",false],
+        c : ["It can be explicitly set using bind(), call(), or apply().",true],
+        d : ["It behaves differently in arrow functions compared to regular functions",false],
+        count : 2
+    }
+
+    
+]
+
+function main(){
+    function generateRandom(){
+        let min = 0;
+        let max = 19;
+        let questionMap = new Map();
+        let set = new Set();
+        questions.forEach((question, index) => {
+            questionMap.set(question, index);
+        });
+    
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    
+        let num = getRandomNumber(min,max)
+        while(set.has(num)){
+            if(!set.has(num)){
+                set.add(num);
+                break;
+            }
+            num = getRandomNumber(min,max)
+        }
+    
+        
+        return num;
+    }
+
+    
+
+    let num = generateRandom()
+    
+    document.getElementById("main_question").innerText = questions[num];
+
+    document.getElementById("checkbox_text1").innerText = answers[num].a;
+    document.getElementById("checkbox_text2").innerText = answers[num].b;
+    document.getElementById("checkbox_text3").innerText = answers[num].c;
+    document.getElementById("checkbox_text4").innerText = answers[num].d;
+    return {
+        checkCorrect: function(index = num){
+            let many = answers[index].count; // How many true answers are
+            let trueAnswers = 0;             // My choosen true answers 
+            let checked = [document.getElementById("answer1").checked, document.getElementById("answer2").checked, document.getElementById("answer3").checked, document.getElementById("answer4").checked]
+            let truePoints = [];
+            console.log(checked)
+            
+            for(let key in answers[index]){
+                if(answers[index][key][1] === true){
+                    truePoints.push(true)
+                }else if(answers[index][key][1] === false){
+                    truePoints.push(false)
+                }
+            }
+            console.log(truePoints)
+            for(let i = 0; i < checked.length;i++){
+                if(checked[i] !== truePoints[i] && checked[i] === true){
+                    alert("False aper");
+                    return
+                }else if((checked[i] === truePoints[i] ) && checked[i] === true){
+                    trueAnswers++;
+                    if(many === trueAnswers && i === checked.length - 1){
+                        alert("Gtar sax TRUE")
+                        return true;
+                    }
+                }
+            }
+            if(many === trueAnswers){
+                alert("Gtar sax.Molod TRUE")
+                return true;
+            }else if(trueAnswers === 0){
+                alert("Choose any answer next time");
+                return false
+            }else{
+                alert("Ches gte sax");
+                return false;
+            }
+        }
+    }
+}
+
+let time = 30;
+let b = setInterval(()=>{
+    document.getElementById("timer").innerText = --time;
+    if(time === 0){
+        clearInterval(b)
+    }
+},1000)
+
+
+let quiz = main()

@@ -1,0 +1,233 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+
+/*------------------------------------------------*/
+
+body{
+    overflow-x: hidden;
+    background-color: bisque;
+}
+
+.container{
+    max-width:841px;
+    margin:0 auto;
+}
+
+.wrapper{
+    padding-bottom: 25px;
+    
+    background-image: url(../images/main_page/welcome.jpg);
+    max-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin:0 auto;
+}
+
+/*-------------------Window------------------------*/
+
+.window{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    .info_row{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        .info_img{
+            margin-top: 3rem;
+            width: 400px;
+            height: 400px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            box-shadow: 2px 2px 15px rgba(229, 182, 94, 0.61);
+            background-image: url("../images/main_page/1_prev_ui.png");
+        }
+
+        .info_text{
+            padding-top: 15px;
+            text-align: center;
+            h2{
+                color:white;
+                font-size:35px;
+                letter-spacing: 8px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+        }
+
+    }
+
+    .topics{
+        margin-top: 50px;
+        min-width:100%; 
+        .topics_row{
+            display: flex;
+            justify-content: space-around;
+            div{
+                width: 100px;
+                height: 100px;
+                border-radius: 100px;
+            }
+
+            a{
+                
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 100px;
+            }
+
+            .show{
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                justify-content: center;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.399);
+                opacity: 0;
+                transition: opacity 0.5s ease;
+                h5{
+                    color:white;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    letter-spacing: 1px;
+                    transition: 1s;
+                }
+                transition: 1s;
+            }
+
+            a:hover{
+                .show{
+                    transition: 1s;
+                    opacity: 1;
+                    h5{
+                        letter-spacing: 9px;
+                        transition: 1s;
+                    }
+                    
+                }
+                
+            }
+
+            a:nth-child(1){
+                background-image: url(../images/main_page/Topics/anime.jpg);
+                box-shadow: 2px 2px 15px rgba(223, 219, 217, 0.371);
+                border:2px solid rgba(15, 15, 16, 0.749);
+                background-size: 100%;
+                transition: background-size 0.5s ease
+                
+            }
+
+                a:nth-child(1):hover{
+                    background-size: 120%;
+                    transition: background-size 0.5s ease;
+                }
+
+            a:nth-child(2){
+                background-image: url(../images/main_page/Topics/food.jpg);
+                box-shadow: 2px 2px 15px rgba(218, 173, 36, 0.655);
+                border:2px solid rgba(239, 235, 97, 0.86);
+                background-size: 135%;
+                transition: background-size 0.5s ease
+            }
+
+                a:nth-child(2):hover{
+                    background-size: 165%;
+                    transition: background-size 0.5s ease
+                }
+
+            a:nth-child(3){
+                background-image: url(../images/main_page/Topics/prog.jpg);
+                box-shadow: 2px 2px 15px rgba(186, 85, 38, 0.777);
+                border:2px solid rgba(250, 163, 71, 0.819);
+                background-size: 100%;
+                transition: background-size 0.5s ease
+            }
+
+                a:nth-child(3):hover{
+                    background-size: 120%;
+                    transition: background-size 0.5s ease
+                }
+
+            a:nth-child(4){
+                background-image: url(../images/main_page/Topics/gamer.jpg);
+                box-shadow: 2px 2px 15px rgba(228, 60, 212, 0.455);
+                border:2px solid rgba(251, 134, 237, 0.749);
+                background-size: 170%;
+                transition: background-size 0.5s ease
+            }
+
+                a:nth-child(4):hover{
+                    background-size: 200%;
+                    transition: background-size 0.5s ease
+                }
+
+            a:nth-child(5){
+                background-image: url(../images/main_page/Topics/sport.jpg);
+                box-shadow: 2px 2px 15px rgba(49, 96, 224, 0.563);
+                border:2px solid rgba(105, 87, 241, 0.749);
+                background-size: 170%;
+                transition: background-size 0.5s ease
+            }
+
+                a:nth-child(5):hover{
+                    background-size: 200%;
+                    transition: background-size 0.5s ease
+                }
+        }
+    }
+    
+}
+
+@media screen and (min-width:1440px){
+    body{
+        overflow-y: hidden;
+    }
+}
+
+@media screen and (max-width:641px){
+    .topics_row{
+        flex-direction: column;
+        align-items: center;
+
+        a{
+            width: 100px;
+            height: 100px;
+            margin-top: 25px;
+        }
+
+        a:nth-child(1){
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen and (max-width:440px){
+    .contact_texts{
+        text-align: left;
+    }
+
+    .info_text{
+        span{
+            display: none;
+        }
+    }
+    
+    .left{
+        margin-right: 200px;
+    }
+}

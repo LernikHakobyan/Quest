@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="window">
+            <div class="container">
+                
+
+                <div class="quest">
+                    <div class="quest_row">
+                        <div class="header">
+                            <div class="header_row">
+
+                                <div class="status">
+                                    <div class="status_row">
+
+                                        <div class="hearts">
+                                            <div class="hearts_row">
+                                                <div class="heart" id="heart_back_3">
+                                                    
+                                                </div>
+
+                                                <div class="heart" id="heart_back_2">
+                                                    
+                                                </div>
+
+                                                <div class="heart" id="heart_back_1">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="score">
+                                            <h2>Score: <span id="score_counter">0</span></h2>
+                                        </div>
+
+                                        <div class="time" id="time">
+                                            <h2>All Time: <span id="timer">30</span></h2>
+                                            <h3>Time: <span id="timer_question">10</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quest_img">
+                                        <a href="" id="disabled">
+                                            <div class="background_quest_img" id="background_quest_img"></div>
+                                        </a>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <p id="question_text"><span id="num">1</span>. <span id="main_question">This is your question.Choose correct</span></p>
+                        </div>
+
+                        <div class="form_quest" id="form_quest">
+                            <form id="myForm" action="">
+                                <div class="all_questions">
+                                    <div class="all_questions_row">
+                                        <div class="first_col">
+
+                                            <div class="answer first_answer" onclick='changeBut("answer1")'>
+                                                <label class="click_label" for="answer1">
+                                                    <div class="answer_row">
+                                                        <label class="checkbox-container">
+                                                            <input type="checkbox" id="answer1">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <div id="checkbox_text1" class="checkbox_text">
+                                                            <input value="Hello my dear" type="button" class="doo1""> 
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            
+                                            <div class="answer first_answer" onclick='changeBut("answer2")'>
+                                                <label class="click_label" for="answer2">
+                                                    <div class="answer_row">
+                                                        <label class="checkbox-container">
+                                                            <input type="checkbox" id="answer2">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <div id="checkbox_text2" class="checkbox_text">
+                                                            <input value="Hello my dear" type="button" class="doo1""> 
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="second_col">
+                                            <div class="answer first_answer" onclick='changeBut("answer3")'>
+                                                <label class="click_label" for="answer3">
+                                                    <div class="answer_row">
+                                                        <label class="checkbox-container">
+                                                            <input type="checkbox" id="answer3">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <div id="checkbox_text3" class="checkbox_text">
+                                                            <input value="Hello my dear" type="button" class="doo1""> 
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+
+                                            <div class="answer first_answer" onclick='changeBut("answer4")'>
+                                                <label class="click_label" for="answer4">
+                                                    <div class="answer_row">
+                                                        <label class="checkbox-container">
+                                                            <input type="checkbox" id="answer4">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <div id="checkbox_text4" class="checkbox_text">
+                                                            <input value="Hello my dear" type="button" class="doo1""> 
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+
+                                            <div class="submit_div">
+                                                <input value="Your Text Here" class="doo" type="button" onclick="quiz.checker()"> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./script/script.js"></script>
+    <script>
+        // document.getElementById("timer").innerText = localStorage.remainingTime || 5;
+        // document.getElementById("timer_question").innerText = localStorage.questTime || 10;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,357 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*------------------------------------------------*/
+body {
+  overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.849);
+}
+
+.container {
+  max-width: 841px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding-bottom: 25px;
+  max-width: 100%;
+  min-height: 100%;
+  background-image: url(../images/image\ \(2\).jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+}
+
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+.quest {
+  padding-top: 5px;
+  /*---- Only question div part----*/
+  /*---- End Only question div part----*/
+  /*---- All answers divs correcting part ----*/
+  /*----End of All answers divs correcting part ----*/
+  /*---Checkbox level upgrading part---*/
+  /*---End of Checkbox level upgrading part---*/
+  /*---Submit button style---*/
+  /*---End of submit button style---*/
+}
+.quest .quest_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.quest #disabled {
+  pointer-events: none;
+}
+.quest #background_quest_img {
+  cursor: pointer;
+  margin-top: 3rem;
+  min-width: 400px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-image: url("../images/main_girl.png");
+}
+.quest .header_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.quest .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.quest .status .status_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.quest .status .hearts .hearts_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.quest .status .hearts .heart {
+  min-width: 30px;
+  min-height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/heart.png");
+  margin-left: 20px;
+}
+.quest .status .score, .quest .status .time {
+  padding-top: 10px;
+  margin-left: 20px;
+}
+.quest .status .score h2, .quest .status .time h2 {
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+}
+.quest .status .score h3, .quest .status .time h3 {
+  padding-top: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+}
+.quest .status .score span, .quest .status .time span {
+  color: rgb(53, 185, 242);
+}
+.quest .question {
+  border: 1px solid #474a5d;
+  border-radius: 15px;
+  -webkit-box-shadow: 1px 10px 5px rgba(53, 129, 242, 0.492);
+          box-shadow: 1px 10px 5px rgba(53, 129, 242, 0.492);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  min-height: 75px;
+  background-color: rgba(71, 74, 93, 0.4509803922);
+  padding: 5px 15px 5px 15px;
+}
+.quest .question p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: white;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+.quest .question #num {
+  color: rgb(53, 185, 242);
+}
+.quest .form_quest {
+  margin-top: 15px;
+}
+.quest .answer {
+  --😀: #b614de48;
+  --😀😀: #00000082;
+  --😀😀😀: #a50e9d00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+  cursor: pointer;
+  margin-top: 30px;
+  width: 100%;
+  min-height: 80px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  background: var(--😀);
+  border: 2px solid var(--😀😀);
+  border-radius: 0.75rem;
+  -webkit-box-shadow: 0 8px 0 var(--😀😀);
+          box-shadow: 0 8px 0 var(--😀😀);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  -webkit-filter: drop-shadow(0 15px 20px var(--😀😀😀));
+          filter: drop-shadow(0 15px 20px var(--😀😀😀));
+}
+.quest .answer .answer_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.quest .answer .answer_text {
+  letter-spacing: 2px;
+  padding-left: 15px;
+}
+.quest .answer .checkbox_text {
+  margin-left: 15px;
+}
+.quest .answer .checkbox_text p {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.quest .answer .click_label {
+  cursor: pointer;
+}
+.quest .answer:active {
+  letter-spacing: 0px;
+  -webkit-transform: skew(-2deg) translateY(8px);
+          transform: skew(-2deg) translateY(8px);
+  -webkit-box-shadow: 0 0 0 var(--😀😀😀);
+          box-shadow: 0 0 0 var(--😀😀😀);
+}
+.quest .checkbox-container {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.quest .checkbox-container input[type=checkbox] {
+  display: none; /* Hide the default checkbox */
+}
+.quest .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(128, 124, 126); /* Set black background color for the checkbox */
+  border: 2px solid #ccc;
+  border-radius: 3px;
+}
+.quest .checkbox-container input[type=checkbox]:checked + .checkmark {
+  background-color: rgb(25, 24, 24); /* Set black background color for the checked checkbox */
+  border-color: rgb(97, 96, 128);
+}
+.quest .checkmark:after {
+  content: "✔"; /* Unicode character for checkmark symbol */
+  font-size: 18px; /* Adjust size as needed */
+  color: rgb(53, 185, 242); /* Set red color for the checkmark sign */
+  display: none;
+  left: 5px;
+  top: 1px;
+}
+.quest .checkbox-container input[type=checkbox]:checked + .checkmark:after {
+  display: block;
+}
+.quest .submit_div .doo {
+  --😀: #644dff;
+  --😀😀: #4836bb;
+  --😀😀😀: #654dff63;
+  cursor: pointer;
+  margin-top: 30px;
+  width: 100%;
+  min-height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  color: #fff;
+  background: var(--😀);
+  border: 2px solid var(--😀😀);
+  border-radius: 0.75rem;
+  -webkit-box-shadow: 0 8px 0 var(--😀😀);
+          box-shadow: 0 8px 0 var(--😀😀);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  -webkit-filter: drop-shadow(0 15px 20px var(--😀😀😀));
+          filter: drop-shadow(0 15px 20px var(--😀😀😀));
+}
+.quest .submit_div .doo:active {
+  letter-spacing: 0px;
+  -webkit-box-shadow: 0 0 0 var(--😀😀😀);
+          box-shadow: 0 0 0 var(--😀😀😀);
+}
+
+@media screen and (max-width: 440px) {
+  .header_row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .quest_img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
